@@ -9,9 +9,19 @@ let token = localStorage.getItem("token");
 const initalState = {
   loading: false,
   error: false,
-  isAuth: !!token,
+  isAuth: token ? true : false ,   // isAuth: !!token  is also valid
   token: token,
 };
+
+
+// ---------->  CONCEPT <-------------
+
+// let a = "abc"
+// and console.log(!a) = false
+// and console.log(!!a) true , which we have did in line no 12
+
+// <-------------------------------------->
+
 
 export const authReducer = (state = initalState, { type, payload }) => {
   switch (type) {

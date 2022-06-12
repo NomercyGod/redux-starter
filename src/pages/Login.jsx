@@ -7,6 +7,7 @@ import { loginAPI } from "../store/auth/auth.actions";
 const Login = () => {
   const dispatch = useDispatch();
   const location = useLocation();
+  console.log(location)
   const navigate = useNavigate();
   const { isAuth } = useSelector((state) => state.auth);
   const [loginCreds, setLoginCreds] = useState({
